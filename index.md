@@ -1,6 +1,7 @@
 # Build Your Private Cloud: Ultimate VPS Storage Guide
 
 ![][image1]
+
 Public clouds like Dropbox and Google Drive seem affordable initially, but recurring fees add up, and your data resides on third-party hardware. This guide teaches you to deploy a self-managed cloud on any VPS provider — with full control, lower latency, and no vendor lock-in. 
 
 # VPS as a Cloud Drive
