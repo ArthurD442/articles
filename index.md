@@ -129,7 +129,8 @@ Steps for connecting via SFTP in FileZilla:
    In the dropdown list “Login Type,” select Normal. In the “User” field, enter root (if you have a Linux-VPS, default access is provided under the root user). In the “Password” field, enter the password provided for the root user. **Note: For production use, create a dedicated system user with restricted permissions instead of using root.**![][image7]  
    Click “Connect.” FileZilla will establish a secure connection to your server using the SFTP protocol over SSH. If connecting for the first time, the program might show a warning about an unknown host key — approve it, this is a standard check.  
 4. **Verifying Access and Transferring Files**  
-   After a successful connection, you will see the contents of your VPS in the right panel of FileZilla (usually, the root file system of the server opens). Now you can transfer files: in the left panel, select the file you need on your computer and drag it with the mouse to the desired folder in the right panel (or use the context menu “Upload”). FileZilla will start the upload; upon completion, the file will appear on the server.![][image8]
+   After a successful connection, you will see the contents of your VPS in the right panel of FileZilla (usually, the root file system of the server opens). Now you can transfer files: in the left panel, select the file you need on your computer and drag it with the mouse to the desired folder in the right panel (or use the context menu “Upload”). FileZilla will start the upload; upon completion, the file will appear on the server.
+![][image8]
 
 # Frequently Asked Questions
 
