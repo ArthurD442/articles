@@ -21,7 +21,6 @@ A VPS is a versatile solution for organizing your own data storage for a wide va
 | **Integrations** | Closed ecosystem | Any open‑source app |
 | **Vendor lock‑in** | High | Low (open stack) |
 
-
 # Advantages of VPS over Cloud Services
 
 Using a VPS as a network drive or cloud storage offers several significant advantages compared to traditional cloud services:
@@ -40,8 +39,7 @@ Before starting, it’s important to choose the right VPS hosting. Here are the 
 * **Disk Space Volume**  
   Estimate how much data you plan to store and choose a VPS with the appropriate disk size. For personal use, usually 100–500 GB is sufficient unless you’re a videographer or store large archives. For a team, you may need 1 TB or more, especially if backups or a large number of media files are planned.   
 * **Disk Type**  
-  For archive storage and backups, HDD drives are usually sufficient and cheaper, although VPS with HDD is largely replaced by SSD/NVMe due to performance.
-  Note: when provisioning a very large disk, automatic backups may not be available — in that case, you’ll have to back up data manually or using an external storage.  
+  For archive storage and backups, HDD drives are usually sufficient and cheaper, although VPS with HDD is largely replaced by SSD/NVMe due to performance. Note: when provisioning a very large disk, automatic backups may not be available — in that case, you’ll have to back up data manually or using an external storage.  
 * **Connection Speed**  
   Examine the bandwidth provided by the service provider. A bandwidth of 1 Gbps (1000 Mbps) is highly recommended for large files or multiple users. Many virtual private servers now offer this level of speed, which is more than sufficient. The amount of data transferred also plays a role: some providers offer unlimited data, while others may have a monthly cap.  
 * **Operating System**  
@@ -93,11 +91,19 @@ For larger teams or if you need to distribute files to many external users, it�
 
 The most well-known packages for deploying a private cloud on VPS are open-source solutions. We recommend paying attention to the following:
 
-**Nextсloud![][image2]**  
+**Nextсloud
+
+![][image2]
+
+**  
 A powerful platform for private clouds with open source. It provides a user-friendly web interface and many features: file synchronization, shared folders for groups, calendar, contacts, online document editing, file comments, etc. Extensions and apps are supported, allowing you to customize Nextcloud for a family storage or a corporate portal for your team — its flexibility is amazing.
 
 **ownCloud**  
-**![][image3]**  
+**
+
+![][image3]
+
+**  
 Another popular open-source solution, the “progenitor” of Nextcloud (once developers split into two projects). ownCloud allows you to organize a secure cloud storage for data backup and file sharing. The functionality is similar: there are clients for different devices, a web interface, and the possibility of collaborative work. Suitable for those who want to control their data and infrastructure.
 
 Deploying Nextcloud or ownCloud on a VPS is well-documented. Briefly, the process is as follows: install a web server (Apache/Nginx), PHP, and a database (MySQL/MariaDB), then download the Nextcloud/ownCloud distribution and configure it via the web master. Many hosts offer ready-made VPS images with pre-installed Nextcloud, which further simplifies the task. As a result, you get your own cloud with a convenient interface and practically unlimited customization possibilities.
@@ -111,13 +117,22 @@ Let’s look at purchasing a basic VPS plan — a Linux server with 1 vCPU, 1 GB
    **Tip:** Estimate your project requirements in advance and choose a location and tariff with some buffer. Moving the VPS to another country or changing the plan is possible later but will take time and incur additional costs.  
    A list of many countries is available; we choose the closest region for minimal latency.  
 2. **Configuring the VPS**  
-   On the order page, you’ll be offered to configure the server parameters. First, select the specific tariff plan from the required line — for example, the minimum plan with 1 processor, 1 GB RAM, and 20 GB NVMe. Then specify additional options: operating system (available Linux distributions), control panel (e.g., ISPmanager, DirectAdmin, or VestaCP), administration type (standard maintenance, VIP, or unmanaged), backup type (free weekly or paid daily), the need for additional IP addresses, and DDoS protection type (standard free available for Netherlands). At this step, choose the billing period — monthly or longer (3, 6, 12 months). Here you can choose the tariff, operating system, disk space size, billing period, and additional options (backup, DDoS protection, etc.) before adding the service to the cart. Note: longer payment periods often come with bonuses and discounts![][image4]  
+   On the order page, you’ll be offered to configure the server parameters. First, select the specific tariff plan from the required line — for example, the minimum plan with 1 processor, 1 GB RAM, and 20 GB NVMe. Then specify additional options: operating system (available Linux distributions), control panel (e.g., ISPmanager, DirectAdmin, or VestaCP), administration type (standard maintenance, VIP, or unmanaged), backup type (free weekly or paid daily), the need for additional IP addresses, and DDoS protection type (standard free available for Netherlands). At this step, choose the billing period — monthly or longer (3, 6, 12 months). Here you can choose the tariff, operating system, disk space size, billing period, and additional options (backup, DDoS protection, etc.) before adding the service to the cart. Note: longer payment periods often come with bonuses and discounts
+
+![][image4]
+
+  
 3. **Ordering and Payment**  
    Check the selected VPS configuration in the cart: location, tariff, specs, and all added options. If you have a promo code, enter it at checkout — this will reduce the order price. Click “Add to Cart” and proceed to payment. Then select a convenient payment method and make the payment.
-   ![][image5]  
+
+![][image5]
+
+  
    After successful payment, the order is processed: usually, the VPS is activated within a few minutes. You will receive an email confirming payment and service activation at the specified email address.  
-5. **Receiving Access Details**  
-   After VPS activation, you will receive access details to the server via email: IP address, admin login, and password (root). These details are also duplicated in your personal account — you can view them anytime by logging into the section with your servers. In our example, you’ll receive an IP like xxx.xxx.xxx.xxx, username root, and a generated password. Record or save these details in a secure location. Now you can connect to your new server and upload files.![][image6]
+4. **Receiving Access Details**  
+   After VPS activation, you will receive access details to the server via email: IP address, admin login, and password (root). These details are also duplicated in your personal account — you can view them anytime by logging into the section with your servers. In our example, you’ll receive an IP like xxx.xxx.xxx.xxx, username root, and a generated password. Record or save these details in a secure location. Now you can connect to your new server and upload files.
+
+![][image6]
 
 # Connecting to the Server via FileZilla (SFTP)
 
@@ -130,11 +145,15 @@ Steps for connecting via SFTP in FileZilla:
 2. **Setting up the Protocol and Host**  
    In the connection settings, select the protocol SFTP – SSH File Transfer Protocol (by default, FileZilla might be set to FTP, which needs to be switched to SFTP). In the “Host” field, enter your VPS IP address (the one that came via email). The port can be left blank if using the standard 22 — FileZilla will automatically insert it.  
 3. **Login Credentials**  
-   In the dropdown list “Login Type,” select Normal. In the “User” field, enter root (if you have a Linux-VPS, default access is provided under the root user). In the “Password” field, enter the password provided for the root user.
-   **Note: For production use, create a dedicated system user with restricted permissions instead of using root.**![][image7]  
+   In the dropdown list “Login Type,” select Normal. In the “User” field, enter root (if you have a Linux-VPS, default access is provided under the root user). In the “Password” field, enter the password provided for the root user. **Note: For production use, create a dedicated system user with restricted permissions instead of using root.**
+
+![][image7]
+
+  
    Click “Connect.” FileZilla will establish a secure connection to your server using the SFTP protocol over SSH. If connecting for the first time, the program might show a warning about an unknown host key — approve it, this is a standard check.  
-5. **Verifying Access and Transferring Files**  
+4. **Verifying Access and Transferring Files**  
    After a successful connection, you will see the contents of your VPS in the right panel of FileZilla (usually, the root file system of the server opens). Now you can transfer files: in the left panel, select the file you need on your computer and drag it with the mouse to the desired folder in the right panel (or use the context menu “Upload”). FileZilla will start the upload; upon completion, the file will appear on the server.
+
 ![][image8]
 
 # Frequently Asked Questions
